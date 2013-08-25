@@ -11,3 +11,8 @@
 *.lai
 *.la
 *.a
+
+# blade build directory
+blade-bin
+build64_release
+

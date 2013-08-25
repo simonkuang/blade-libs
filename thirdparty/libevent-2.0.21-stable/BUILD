@@ -1,0 +1,35 @@
+cc_library(
+    name = "event",
+    srcs = [
+        "event.c",
+        "evthread.c",
+        "buffer.c",
+        "bufferevent.c",
+        "bufferevent_sock.c",
+        "bufferevent_filter.c",
+        "bufferevent_pair.c",
+        "listener.c",
+        "bufferevent_ratelim.c",
+        "evmap.c",
+        "log.c",
+        "evutil.c",
+        "evutil_rand.c",
+        "strlcpy.c",
+        "select.c",
+        "poll.c",
+        "epoll.c",
+        "signal.c",
+        "event_tagging.c",
+        "http.c",
+        "evdns.c",
+        "evrpc.c",
+        'evthread_pthread.c',
+    ],
+    incs = ['include', 'include/event2', 'compat'],
+    defs = 'HAVE_CONFIG_H',
+    deps = [
+        '//thirdparty/openssl:ssl',
+        '#rt',
+        '#pthread'
+    ]
+)

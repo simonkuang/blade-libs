@@ -1,0 +1,8 @@
+import "google/protobuf/descriptor.proto";
+
+package example;
+
+message ExampleMessage {
+    optional int32 first = 1;
+    optional string second = 2;
+}
