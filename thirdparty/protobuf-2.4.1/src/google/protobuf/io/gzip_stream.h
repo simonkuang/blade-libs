@@ -43,7 +43,7 @@
 #ifndef GOOGLE_PROTOBUF_IO_GZIP_STREAM_H__
 #define GOOGLE_PROTOBUF_IO_GZIP_STREAM_H__
 
-#include <zlib.h>
+#include "thirdparty/zlib/zlib.h"
 
 #include <google/protobuf/io/zero_copy_stream.h>
 

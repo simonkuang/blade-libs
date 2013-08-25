@@ -12,7 +12,9 @@
 *.la
 *.a
 
-# blade build directory
+# blade build directory & file
 blade-bin
 build64_release
-
+.Building.lock
+.blade.test.stamp
+.sconsign.dblite
