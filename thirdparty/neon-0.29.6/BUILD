@@ -1,0 +1,44 @@
+cc_library(
+    name = 'neon',
+    srcs = [
+        'src/ne_request.c',
+        'src/ne_session.c',
+        'src/ne_basic.c',
+        'src/ne_string.c',
+        'src/ne_uri.c',
+        'src/ne_dates.c',
+        'src/ne_alloc.c',
+        'src/ne_md5.c',
+        'src/ne_utils.c',
+        'src/ne_socket.c',
+        'src/ne_auth.c',
+        'src/ne_redirect.c',
+        'src/ne_compress.c',
+        'src/ne_i18n.c',
+        'src/ne_pkcs11.c',
+        'src/ne_socks.c',
+        'src/ne_ntlm.c',
+        'src/ne_207.c',
+        'src/ne_xml.c',
+        'src/ne_props.c',
+        'src/ne_locks.c',
+        'src/ne_xmlreq.c',
+        'src/ne_oldacl.c',
+        'src/ne_acl3744.c',
+        'src/ne_openssl.c',
+    ],
+    defs = 'HAVE_CONFIG_H',
+    incs = [
+        '../expat',
+        '../openssl',
+        'src',
+        '.'
+    ],
+    deps = [
+        '//thirdparty/expat:expat',
+        '//thirdparty/openssl:ssl',
+        '//thirdparty/openssl:crypto',
+        '#z'
+    ],
+    warning = 'no'
+)
