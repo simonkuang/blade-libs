@@ -1,0 +1,5 @@
+#ifndef THRIFT_VERSION
+
+#define THRIFT_VERSION "0.9.1"
+
+#endif // THRIFT_VERSION
