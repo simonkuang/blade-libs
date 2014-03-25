@@ -21,3 +21,7 @@ build64_release
 
 # demo directory
 demo
+
+# vim swp file
+*.swp
+
