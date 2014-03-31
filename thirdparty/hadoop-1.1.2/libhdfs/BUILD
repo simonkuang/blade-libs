@@ -1,3 +1,5 @@
+JAVA_INCS="/usr/lib/jvm/java-1.7.0-openjdk-1.7.0.51.x86_64/include/"
+
 cc_library(
     name = 'hdfs',
     srcs = [
@@ -5,7 +7,7 @@ cc_library(
         'hdfsJniHelper.c',
     ],
     #FIXME(yeshunping) : how to set path for it properly?
-    incs = ['/usr/lib/jvm/java-7-openjdk-amd64/include/', '.'],
+    incs = [JAVA_INCS, '.'],
     warning = 'no',
 )
 
@@ -17,7 +19,7 @@ cc_binary(
         'hdfs_read.c',
     ],
     deps = [':hdfs'],
-    incs = ['/usr/lib/jvm/java-7-openjdk-amd64/include/', '.'],
+    incs = [JAVA_INCS, '.'],
     warning = 'no',
 )
 
@@ -27,6 +29,6 @@ cc_binary(
         'hdfs_write.c'
     ],
     deps = [':hdfs'],
-    incs = ['/usr/lib/jvm/java-7-openjdk-amd64/include/', '.'],
+    incs = [JAVA_INCS, '.'],
     warning = 'no',
 )
