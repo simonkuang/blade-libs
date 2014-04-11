@@ -79,6 +79,11 @@ cc_library(
 )
 
 cc_library(
+  name = 'thriftnb',
+  deps = '//thirdparty/thrift-0.9.1:thriftnb',
+)
+
+cc_library(
   name = 'thrifty',
   deps = '//thirdparty/thrift-0.9.1:thrifty',
 )

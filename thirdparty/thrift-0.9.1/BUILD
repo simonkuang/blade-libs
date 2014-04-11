@@ -1,149 +1,34 @@
-cc_library(
-  name = 'parse',
+cc_binary(
+  name = 'thrift_compiler',
   srcs = [
-    'compiler/cpp/src/parse/parse.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 'md5',
-  srcs = [
+    'compiler/cpp/src/main.cc',
     'compiler/cpp/src/md5.c',
-  ],
-)
-
-cc_library(
-  name = 't_javame_generator',
-  srcs = [
-    'compiler/cpp/src/generate/t_javame_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 't_php_generator',
-  srcs = [
-    'compiler/cpp/src/generate/t_php_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 't_cpp_generator',
-  srcs = [
-    'compiler/cpp/src/generate/t_cpp_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 't_c_glib_generator',
-  srcs = [
-    'compiler/cpp/src/generate/t_c_glib_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 't_java_generator',
-  srcs = [
-    'compiler/cpp/src/generate/t_java_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 't_py_generator',
-  srcs = [
-    'compiler/cpp/src/generate/t_py_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 't_generator',
-  srcs = [
     'compiler/cpp/src/generate/t_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 't_js_generator',
-  srcs = [
-    'compiler/cpp/src/generate/t_js_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 't_html_generator',
-  srcs = [
+    'compiler/cpp/src/parse/parse.cc',
+    'compiler/cpp/src/generate/t_c_glib_generator.cc',
+    'compiler/cpp/src/generate/t_cpp_generator.cc',
+    'compiler/cpp/src/generate/t_java_generator.cc',
+    'compiler/cpp/src/generate/t_as3_generator.cc',
+    'compiler/cpp/src/generate/t_csharp_generator.cc',
+    'compiler/cpp/src/generate/t_py_generator.cc',
+    'compiler/cpp/src/generate/t_rb_generator.cc',
+    'compiler/cpp/src/generate/t_perl_generator.cc',
+    'compiler/cpp/src/generate/t_php_generator.cc',
+    'compiler/cpp/src/generate/t_erl_generator.cc',
+    'compiler/cpp/src/generate/t_cocoa_generator.cc',
+    'compiler/cpp/src/generate/t_st_generator.cc',
+    'compiler/cpp/src/generate/t_ocaml_generator.cc',
+    'compiler/cpp/src/generate/t_hs_generator.cc',
+    'compiler/cpp/src/generate/t_xsd_generator.cc',
     'compiler/cpp/src/generate/t_html_generator.cc',
+    'compiler/cpp/src/generate/t_js_generator.cc',
+    'compiler/cpp/src/generate/t_javame_generator.cc',
+    'compiler/cpp/src/generate/t_delphi_generator.cc',
+    'compiler/cpp/src/generate/t_go_generator.cc',
+    'compiler/cpp/src/generate/t_gv_generator.cc',
+    'compiler/cpp/src/generate/t_d_generator.cc',
+    'compiler/cpp/thrifty.cc',
+    'compiler/cpp/thriftl.cc',
   ],
   incs = [
     'compiler/cpp/src',
@@ -156,126 +41,88 @@ cc_library(
   warning = 'no',
 )
 
+# added by simonkuang, on 2014-03-26, for scribe
 cc_library(
-  name = 't_rb_generator',
-  srcs = [
-    'compiler/cpp/src/generate/t_rb_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 't_go_generator',
-  srcs = [
-    'compiler/cpp/src/generate/t_go_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 't_perl_generator',
-  srcs = [
-    'compiler/cpp/src/generate/t_perl_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 't_erl_generator',
-  srcs = [
-    'compiler/cpp/src/generate/t_erl_generator.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_binary(
   name = 'thrift',
   srcs = [
-    'compiler/cpp/src/main.cc',
-  ],
-  deps=[
-    ':parse',
-    ':t_javame_generator',
-    ':t_php_generator',
-    ':t_cpp_generator',
-    ':t_c_glib_generator',
-    ':t_java_generator',
-    ':t_py_generator',
-    ':t_generator',
-    ':t_js_generator',
-    ':t_html_generator',
-    ':t_rb_generator',
-    ':t_go_generator',
-    ':t_perl_generator',
-    ':t_erl_generator',
-    ':thrifty',
-    ':thriftl',
-    ':md5',
+    'lib/cpp/src/thrift/Thrift.cpp',
+    'lib/cpp/src/thrift/TApplicationException.cpp',
+    'lib/cpp/src/thrift/VirtualProfiling.cpp',
+    'lib/cpp/src/thrift/concurrency/ThreadManager.cpp',
+    'lib/cpp/src/thrift/concurrency/TimerManager.cpp',
+    'lib/cpp/src/thrift/concurrency/Util.cpp',
+    'lib/cpp/src/thrift/protocol/TBase64Utils.cpp',
+    'lib/cpp/src/thrift/protocol/TDebugProtocol.cpp',
+    'lib/cpp/src/thrift/protocol/TDenseProtocol.cpp',
+    'lib/cpp/src/thrift/protocol/TJSONProtocol.cpp',
+    'lib/cpp/src/thrift/protocol/TMultiplexedProtocol.cpp',
+    'lib/cpp/src/thrift/transport/TTransportException.cpp',
+    'lib/cpp/src/thrift/transport/TFDTransport.cpp',
+    'lib/cpp/src/thrift/transport/TFileTransport.cpp',
+    'lib/cpp/src/thrift/transport/TSimpleFileTransport.cpp',
+    'lib/cpp/src/thrift/transport/THttpTransport.cpp',
+    'lib/cpp/src/thrift/transport/THttpClient.cpp',
+    'lib/cpp/src/thrift/transport/THttpServer.cpp',
+    'lib/cpp/src/thrift/transport/TSocket.cpp',
+    'lib/cpp/src/thrift/transport/TPipe.cpp',
+    'lib/cpp/src/thrift/transport/TPipeServer.cpp',
+    'lib/cpp/src/thrift/transport/TSSLSocket.cpp',
+    'lib/cpp/src/thrift/transport/TSocketPool.cpp',
+    'lib/cpp/src/thrift/transport/TServerSocket.cpp',
+    'lib/cpp/src/thrift/transport/TSSLServerSocket.cpp',
+    'lib/cpp/src/thrift/transport/TTransportUtils.cpp',
+    'lib/cpp/src/thrift/transport/TBufferTransports.cpp',
+    'lib/cpp/src/thrift/server/TServer.cpp',
+    'lib/cpp/src/thrift/server/TSimpleServer.cpp',
+    'lib/cpp/src/thrift/server/TThreadPoolServer.cpp',
+    'lib/cpp/src/thrift/server/TThreadedServer.cpp',
+    'lib/cpp/src/thrift/async/TAsyncChannel.cpp',
+    'lib/cpp/src/thrift/processor/PeekProcessor.cpp',
+    'lib/cpp/src/thrift/concurrency/Mutex.cpp',
+    'lib/cpp/src/thrift/concurrency/Monitor.cpp',
+    'lib/cpp/src/thrift/concurrency/PosixThreadFactory.cpp',
   ],
   incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
+    'lib/cpp/src',
+  ],
+  warning = 'no',
+)
+
+cc_library(
+  name = 'thriftnb',
+  srcs = [
+    'lib/cpp/src/thrift/server/TNonblockingServer.cpp',
+    'lib/cpp/src/thrift/async/TAsyncProtocolProcessor.cpp',
+    'lib/cpp/src/thrift/async/TEvhttpServer.cpp',
+    'lib/cpp/src/thrift/async/TEvhttpClientChannel.cpp',
+  ],
+  incs = [
+    'lib/cpp/src',
+    '../boost-1.55.0',
+  ],
+  warning = 'no',
+)
+
+cc_library(
+  name = 'thriftz',
+  srcs = [
+    'lib/cpp/src/thrift/transport/TZlibTransport.cpp',
+  ],
+  incs = [
+    'lib/cpp/src',
   ],
 )
 
 cc_library(
-  name = 'thrifty',
+  name = 'fb303',
   srcs = [
-    'compiler/cpp/thrifty.cc',
+    'contrib/fb303/cpp/FacebookBase.cpp',
+    'contrib/fb303/cpp/ServiceTracker.cpp',
+    'contrib/fb303/cpp/gen-cpp/FacebookService.cpp',
+    'contrib/fb303/cpp/gen-cpp/fb303_constants.cpp',
+    'contrib/fb303/cpp/gen-cpp/fb303_types.cpp',
   ],
   incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
-  ],
-)
-
-cc_library(
-  name = 'thriftl',
-  srcs = [
-    'compiler/cpp/thriftl.cc',
-  ],
-  incs = [
-    'compiler/cpp/src',
-    'compiler/cpp/src/parse',
-    'compiler/cpp/src/generate',
-    'compiler/cpp',
-    'contrib/zeromq',
-    'lib/cpp/src/thrift/transport',
+    'contrib/fb303/cpp/gen-cpp',
   ],
 )
