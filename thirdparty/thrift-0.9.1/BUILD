@@ -84,6 +84,7 @@ cc_library(
   ],
   incs = [
     'lib/cpp/src',
+    '../boost-1.55.0',
   ],
   warning = 'no',
 )
@@ -124,5 +125,6 @@ cc_library(
   ],
   incs = [
     'contrib/fb303/cpp/gen-cpp',
+    '../boost-1.55.0',
   ],
 )
