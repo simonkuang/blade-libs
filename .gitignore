@@ -25,3 +25,15 @@ demo
 # vim swp file
 *.swp
 
+# from sub-directory scribe
+Makefile
+config.cache
+config.guess
+config.log
+config.status
+config.sub
+depcomp
+install-sh
+missing
+mkinstalldirs
+*.o
