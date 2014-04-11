@@ -1,0 +1,42 @@
+cc_binary(
+  name = 'scribe',
+  srcs = [
+    'src/conf.cpp',
+    'src/conn_pool.cpp',
+    'src/dynamic_bucket_updater.cpp',
+    'src/env_default.cpp',
+    'src/file.cpp',
+    #'src/HdfsFile.cpp',
+    'src/network_dynamic_config.cpp',
+    'src/scribe_server.cpp',
+    'src/store.cpp',
+    'src/store_queue.cpp',
+
+    'src/gen-cpp/BucketStoreMapping.cpp',
+    'src/gen-cpp/bucketupdater_constants.cpp',
+    'src/gen-cpp/bucketupdater_types.cpp',
+    'src/gen-cpp/scribe_constants.cpp',
+    'src/gen-cpp/scribe.cpp',
+    'src/gen-cpp/scribe_types.cpp',
+  ],
+  incs = [
+    '.',
+    'src',
+    'src/gen-cpp',
+    '../thirdparty/thrift/fb303',
+    '../thirdparty/thrift',
+    '../thirdparty/boost-1.55.0',
+  ],
+  #defs = ['USE_SCRIBE_HDFS=1'],
+  deps = [
+    '#pthread',
+    '//thirdparty/thrift:thrift',
+    '//thirdparty/thrift:thriftnb',
+    '//thirdparty/thrift-0.9.1:fb303',
+    '//thirdparty/boost-1.55.0:system',
+    '//thirdparty/boost-1.55.0:filesystem',
+    '//thirdparty/libevent:event',
+  ],
+  warning = 'no',
+)
+
