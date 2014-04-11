@@ -37,3 +37,7 @@ install-sh
 missing
 mkinstalldirs
 *.o
+
+# for mac system
+.DS_Store
+._.DS_Store
