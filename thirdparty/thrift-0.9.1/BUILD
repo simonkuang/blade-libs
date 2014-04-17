@@ -100,6 +100,7 @@ cc_library(
   incs = [
     'lib/cpp/src',
     '../boost-1.55.0',
+    '../libevent',
   ],
   warning = 'no',
 )
@@ -127,4 +128,9 @@ cc_library(
     'contrib/fb303/cpp/gen-cpp',
     '../boost-1.55.0',
   ],
+)
+
+thrift_library(
+  name = 'fb303_thrift',
+  deps = '//thirdparty/thrift-0.9.1/contrib/fb303/if:fb303_thrift',
 )
