@@ -15,6 +15,13 @@ proto_library_config(
   ],
 )
 
+thrift_library_config(
+  thrift_libs = '//thirdparty/thrift:thrift',
+  thrift_incs = [
+    'thirdparty',
+  ],
+)
+
 cc_config(
   extra_incs='thirdparty'
 )

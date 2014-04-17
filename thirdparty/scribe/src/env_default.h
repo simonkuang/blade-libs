@@ -36,8 +36,8 @@
 
 #include "fb303/FacebookBase.h"
 
-#include "src/gen-cpp/scribe.h"
-#include "src/gen-cpp/BucketStoreMapping.h"
+#include "thirdparty/scribe/if/scribe.h"
+#include "thirdparty/scribe/if/BucketStoreMapping.h"
 
 typedef boost::shared_ptr<scribe::thrift::LogEntry> logentry_ptr_t;
 typedef std::vector<logentry_ptr_t> logentry_vector_t;
