@@ -10,7 +10,9 @@ proto_library_config(
   protoc='thirdparty/protobuf/bin/protoc',
   protobuf_libs='//thirdparty/protobuf:protobuf',
   protobuf_path='thirdparty',
-  protobuf_include_path='thirdparty',
+  protobuf_incs=[
+    'thirdparty',
+  ],
 )
 
 cc_config(
