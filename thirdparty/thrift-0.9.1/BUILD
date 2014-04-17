@@ -120,14 +120,12 @@ cc_library(
   srcs = [
     'contrib/fb303/cpp/FacebookBase.cpp',
     'contrib/fb303/cpp/ServiceTracker.cpp',
-    'contrib/fb303/cpp/gen-cpp/FacebookService.cpp',
-    'contrib/fb303/cpp/gen-cpp/fb303_constants.cpp',
-    'contrib/fb303/cpp/gen-cpp/fb303_types.cpp',
   ],
   incs = [
-    'contrib/fb303/cpp/gen-cpp',
     '../boost-1.55.0',
+    'contrib/fb303/if',
   ],
+  deps = [ '//thirdparty/thrift-0.9.1/contrib/fb303/if:fb303_thrift' ],
 )
 
 thrift_library(
